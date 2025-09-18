@@ -8,21 +8,44 @@
     <meta http-equiv="Pragma" content="no-cache">
     <title>Emmanuel Greco - Portfolio</title>
     <link rel="stylesheet" href="../static/css/styles.css">
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link href='https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
 </head>
 <body>
     <header class="header">
-        <a href="#home" class="logo">Emmanuel <span>Greco</span></a>
+        <div class="logo">
+            <img src="../static/assets/Foto Emmanuel Greco.jpg" alt="Emmanuel Greco" class="logo-imagen">
+            <a href="#home" class="logo-nombre">Emmanuel <span>Greco</span></a>
+        </div>
 
-        <nav class="navbar">            
-                <a href="#home" class="active">Home</a>
-                <a href="#sobreMi">Sobre Mí</a>
-                <a href="#proyectos">Proyectos</a>
-                <a href="#tecnologias">Tecnologías</a>
-                <a href="#estudios">Estudios</a>
-                <a href="#certificados">Certificados</a>
-                <a href="#contacto">Contacto</a>
+        <!--i class='bxr  bx-menu' id="menu-icon"></i-->
+
+        <nav class="navbar">
+            <ul id="nav-list">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#sobreMi">Sobre Mí</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#tecnologias">Tecnologías</a></li>
+                <li><a href="#estudios">Estudios</a></li>
+                <!--li><a href="#certificados">Certificados</a></li-->
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>          
         </nav>
     </header>
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <h1>Hola, soy <span>Emmanuel</span>!</h1>
+            <h3><span class="animacion-cargo"></span></h3>
+
+            <div class="redes-icon">
+                <a href="https://www.linkedin.com/in/emmanuel-antonio-greco-689691b7" target="_blank" rel="noopener noreferrer">
+                    <i class='bxl  bx-linkedin-square'></i></a>
+                <a href="https://github.com/EmmanuelGreco" target="_blank" rel="noopener noreferrer">
+                    <i class='bxl  bx-github'></i></a>
+            </div>
+        </div>
+    </section>
 
 
 
@@ -34,5 +57,7 @@
             </nav>
         </div>        
     </header>-->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="../static/js/script.js"></script>
 </body>
 </html>
