@@ -6,7 +6,7 @@
     border: none;
     outline: none;
     scroll-behavior: smooth;
-    font-family: Consolas, 'Courier New', monospace;
+    font-family: Consolas, monospace;
 }
 :root{
     --bg-color: #080808;
@@ -25,6 +25,9 @@ body{
 span{
     color: var(--main-color);
 }
+.container{
+    padding: 5% 10%;
+}
 
 /* Header */
 
@@ -35,7 +38,7 @@ span{
     width: 100%;
     padding: 2rem 4% 2rem;
     background: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(4px);
     /*background-size: cover;*/
     /*background-position: center;*/
     display: flex;
@@ -50,7 +53,7 @@ span{
 }
 .logo-imagen{
     width: 5rem;
-    height: 5rem;
+    max-height: 5rem;
     object-fit: cover;
     border-radius: 20%;
 }
@@ -110,7 +113,7 @@ section{
     min-height: 100vh;
     padding: 0 0 0;
 }
-.home{
+#home{
     height: 100vh;
     background-size: cover;
     background-position: center;
@@ -121,7 +124,7 @@ section{
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding-left: 4%;
+    padding-left: 5%;
 }
 /*.home-content{
     display: flex;
@@ -169,4 +172,51 @@ section{
     transform: scale(1.2)/*translateY(-4px)*/;
     box-shadow: 0 0 25px var(--main-color);
     background-color: var(--main-color);
+}
+
+/* Sobre Mi */
+
+.sobre-mi {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.sobre-mi-columna-1{
+    flex-basis: 60%;
+    display: flex;
+    flex-direction: column;
+}
+.sobre-mi-columna-1 h1{
+    font-size: 4rem;
+    font-weight: 500;
+    text-align: right;
+}
+.sobre-mi-columna-1 p{
+    font-size: 1.8rem;
+    margin-top: 3rem;
+    text-align: justify;
+}
+.sobre-mi-columna-1 p.actualmente-cursando {
+    font-size: 1.5rem;
+    margin-top: 0rem;
+    text-align: justify;
+}
+.sobre-mi-columna-2{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    flex-basis: 30%;
+}
+.sobre-mi-columna-2 img{
+    width: 100%;
+    aspect-ratio: 1/1.1;
+    object-fit: cover;
+    border-radius: 40%;
 }
