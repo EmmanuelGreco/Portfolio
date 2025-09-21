@@ -241,12 +241,11 @@ section {
     grid-template-columns: repeat(3, 1fr);
     gap: 5rem;
 }
-.tarjeta-enlace {
+.proyecto-tarjeta-enlace {
     display: block; 
     text-decoration: none;
     color: inherit;
     width: 100%;
-    box-sizing: border-box;
 }
 .proyecto-tarjeta {
     background-color: var(--bg-color);
@@ -255,29 +254,45 @@ section {
     align-items: center;
     text-align: center;
     overflow: hidden;
-    border-radius: 5%;
+    border-radius: 20px;
     height: 100%;
-    box-shadow: 0 0 20px rgba(0, 255, 238, 0.4);
+    box-shadow: 0 0 15px rgba(0, 255, 238, 0.5);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-.tarjeta-carrusel-img {
+.proyecto-tarjeta h4 {
+    font-size: 2rem;
+    margin-block: 1.5rem;
+}
+.proyecto-tarjeta p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    text-align: justify;
+    margin-bottom: 1.5rem;
+    margin-inline: 1.5rem;
+    color: var(--text-color);
+}
+.proyecto-tarjeta:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 255, 238, 0.7);
+}
+.proyecto-tarjeta-carrusel-img {
     width: 100%;
     height: 200px;
     overflow: hidden;
     position: relative;
 }
-.tarjeta-carrusel-img-fija {
+.proyecto-tarjeta-carrusel-img-fija {
     width: 100%;
     height: 200px;
     overflow: hidden;
     position: relative;
 }
-.tarjeta-carrusel-img-fija img {
+.proyecto-tarjeta-carrusel-img-fija img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.tarjeta-carrusel-img img {
+.proyecto-tarjeta-carrusel-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -289,9 +304,9 @@ section {
 }
 
 /* Animacion de Carrusel */
-.tarjeta-carrusel-img img:nth-child(1) { animation-delay: 0s; }
-.tarjeta-carrusel-img img:nth-child(2) { animation-delay: 4s; }
-.tarjeta-carrusel-img img:nth-child(3) { animation-delay: 8s; }
+.proyecto-tarjeta-carrusel-img img:nth-child(1) { animation-delay: 0s; }
+.proyecto-tarjeta-carrusel-img img:nth-child(2) { animation-delay: 4s; }
+.proyecto-tarjeta-carrusel-img img:nth-child(3) { animation-delay: 8s; }
 
 @keyframes pasarImagen {
     0%   { left: 100%; opacity: 0; }
@@ -299,22 +314,6 @@ section {
     30%  { left: 0%;   opacity: 1; }
     40%  { left: -100%; opacity: 0; }
     100% { left: 100%; opacity: 0; }
-}
-.proyecto-tarjeta h3 {
-    font-size: 2rem;
-    margin-block: 1.5rem;
-}
-.proyecto-tarjeta p {
-    font-size: 1.5rem;
-    line-height: 1.6;
-    text-align: justify;
-    margin-bottom: 1.5rem;
-    margin-inline: 1.5rem;
-    color: var(--text-color);
-}
-.proyecto-tarjeta:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 30px rgba(0, 255, 238, 0.7);
 }
 
 
@@ -349,12 +348,103 @@ section {
     transition: 0.3s ease-in-out;
 }
 .tecnologia h4 {
-    margin-top: 1rem;
     font-size: 2rem;
+    margin-top: 1rem;
 }
 .tecnologia img{
     width: 100px;
 }
 .tecnologia:hover{
     transform: scale(1.25);
+}
+
+
+/* Estudios */
+
+.estudios {
+    min-height: 100vh;
+    background-color: var(--second-bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.estudios h2 {
+    font-size: 4rem;    
+    font-weight: 500;
+    text-align: center;
+}
+.estudios-carrusel {
+    position: relative;
+    width: 100%;
+    max-width: 70%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.estudios h3 {
+    font-size: 3rem;    
+    font-weight: 500;
+    margin-top: 2rem;
+}
+.estudios-carrusel-tarjetas {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.tarjeta-wrapper {
+    flex: 0 0 100%;
+    padding: 1.5rem;
+    display: flex;
+}
+.estudios-tarjeta {
+    background-color: var(--bg-color);
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 255, 238, 0.5);
+    padding: 1.5rem;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: center;
+}
+.estudios-tarjeta img {
+    width: 200px;
+    height: auto;
+    border-radius: 20px;
+    margin-block: auto;
+}
+.certificado-info {
+    flex: 1;
+    margin-inline: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left; 
+}
+.certificado-info h4 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+.certificado-info p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    text-align: justify;
+}
+.carrusel-btn {
+    position: absolute;
+    top: calc(50% + 2.5rem);
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: var(--text-color);
+    border: none;
+    font-size: 3rem;
+    cursor: pointer;
+    padding: 0 1rem;
+    z-index: 10;
+    border-radius: 10px;
+}
+.carrusel-btn.prev {
+    left: 10px;
+}
+.carrusel-btn.next {
+    right: 10px;
 }
