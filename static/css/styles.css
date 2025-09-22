@@ -351,10 +351,10 @@ section {
     font-size: 2rem;
     margin-top: 1rem;
 }
-.tecnologia img{
+.tecnologia img {
     width: 100px;
 }
-.tecnologia:hover{
+.tecnologia:hover {
     transform: scale(1.25);
 }
 
@@ -532,4 +532,54 @@ section {
 @keyframes aparecer {
     from { opacity: 0; }
     to { opacity: 1; }
+}
+
+
+/* Footer */
+
+.footer {
+    background-color: var(--second-bg-color);
+    color: var(--text-color);
+    padding: 3rem 0;
+    font-size: 1.5rem;
+}
+.footer-container {
+    padding-inline: 10%;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.footer-info h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+.footer-info p {
+    font-size: 1.5rem;
+}
+.footer-links a {
+    display: block;
+    color: var(--text-color);
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+.footer-redes a {
+    font-size: 3rem;
+    color: var(--text-color);
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+.footer-links a:hover,
+.footer-redes a:hover {
+    color: var(--main-color);
+}
+.footer-copy {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    color: #999;
 }
