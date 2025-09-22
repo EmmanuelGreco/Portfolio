@@ -448,3 +448,88 @@ section {
 .carrusel-btn.next {
     right: 10px;
 }
+
+
+/* Contacto */
+
+.contacto {
+    min-height: 100vh;
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.contacto h2 {
+    font-size: 4rem;
+    font-weight: 500;
+    margin-bottom: 5rem;
+    text-align: center;
+}
+.form-contacto {
+    max-width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+.form-grupo {
+    display: flex;
+    flex-direction: column;
+}
+.form-grupo label {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+.form-grupo input,
+.form-grupo textarea {
+    padding: 0.8rem 1rem;
+    border: 2px solid rgba(0, 255, 238, 0.5);
+    border-radius: 10px;
+    font-size: 1.5rem;
+    background-color: transparent;
+    color: var(--text-color);
+    outline: none;
+    resize: none;
+}
+.form-grupo input:focus,
+.form-grupo textarea:focus {
+    border-color: rgba(0, 255, 238, 0.9);
+    box-shadow: 0 0 5px rgba(0, 255, 238, 0.6);
+}
+.btn-enviar-mensaje {
+    align-self: center;
+    padding: 0.8rem 2rem;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 15px;
+    background-color: rgba(0, 255, 238, 0.8);
+    color: var(--bg-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn-enviar-mensaje:hover {
+    background-color: rgba(0, 255, 238, 1);
+}
+.mensaje-exito {
+    position: absolute;
+    display: none;
+    max-width: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    background-color: rgba(0, 255, 150, 0.2);
+    border: 1px solid #00ff96;
+    border-radius: 10px;
+    color: #00ff96;
+    font-size: 1.6rem;
+    text-align: center;
+    z-index: 100;
+    opacity: 0;
+    animation: aparecer 0.5s ease forwards;
+}
+@keyframes aparecer {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

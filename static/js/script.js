@@ -6,6 +6,7 @@ const typed = new Typed('.animacion-cargo', {
   loop: true
 });
 
+
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".navbar a");
 
@@ -29,6 +30,7 @@ window.addEventListener("scroll", () => {
   });
 });
 
+
 document.querySelectorAll('.estudios-carrusel').forEach(carrusel => {
     const track = carrusel.querySelector('.estudios-carrusel-tarjetas');
     const cards = Array.from(track.children);
@@ -51,4 +53,20 @@ document.querySelectorAll('.estudios-carrusel').forEach(carrusel => {
         currentIndex = (currentIndex - 1 + cards.length) % cards.length;
         updateCarousel();
     });
+});
+
+
+const form = document.querySelector(".form-contacto");
+const btn = document.querySelector(".btn-enviar-mensaje");
+const cartel = document.getElementById("mensaje-exito");
+
+btn.addEventListener("click", (e) => {
+  e.preventDefault();
+  cartel.style.display = "block";
+
+  form.reset();
+
+  setTimeout(() => {
+    cartel.style.display = "none";
+  }, 3000);
 });
