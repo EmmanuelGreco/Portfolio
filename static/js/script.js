@@ -58,15 +58,19 @@ document.querySelectorAll('.estudios-carrusel').forEach(carrusel => {
         track.style.transform = `translateX(${offset}%)`;
     }
 
-    nextBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex + 1) % cards.length;
-        updateCarousel();
-    });
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % cards.length;
+            updateCarousel();
+        });
+    }
 
-    prevBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex - 1 + cards.length) % cards.length;
-        updateCarousel();
-    });
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+            updateCarousel();
+        });
+    }
 });
 
 
